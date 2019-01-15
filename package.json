@@ -1,0 +1,33 @@
+{
+  "name": "discord-instagram-poster",
+  "version": "1.0.0",
+  "description": "Reads messages posts to a list of public instagram accounts and sends them to a discord channel via a webhook URL",
+  "main": "bot.js",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "basic-instagram-user-details": "^1.0.2",
+    "cheerio": "^1.0.0-rc.2",
+    "discord.js": "^11.4.2",
+    "moment": "^2.23.0",
+    "node-instagram-data-scraper": "^1.0.3",
+    "request": "^2.88.0",
+    "scrape-twitter": "^0.11.1",
+    "simple-array-diff": "^1.1.0",
+    "then-request": "^6.0.0",
+    "webhook-discord": "^3.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/notmonkee/Discord-Instagram-Poster.git"
+  },
+  "author": "Monkee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/notmonkee/Discord-Instagram-Poster/issues"
+  },
+  "homepage": "https://github.com/notmonkee/Discord-Instagram-Poster#readme"
+}
