@@ -7,7 +7,7 @@ const config = require('./config');
 var ci = require('correcting-interval');
 var moment = require('moment');
 var Axios = require('axios');
-const current = new Store({ path: 'current.json' });
+const current = new Store({ path: 'data/current.json' });
 var Hook = []
 config.discord.webhookURL.forEach(function(webhk){
   Hook.push(new Discord.WebhookClient(webhk.id, webhk.token))
