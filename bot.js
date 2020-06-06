@@ -1,8 +1,6 @@
-var fs = require('fs');
 const Discord = require("discord.js");
 const Store = require('data-store');
-var ids = fs.readFileSync('ids.txt').toString().split("\n");
-var request = require('request');
+var ids = (!!process.env.ACCOUNTS) ? process.env.ACCOUNTS.split(",") : ["monkeegfx", "instagram"];
 const config = require('./config');
 var ci = require('correcting-interval');
 var moment = require('moment');
@@ -46,6 +44,7 @@ function postToWebhook(id, url, img, caption){
     "url": url,
     "footer": {"text": moment().format((!!process.env.DATEFORMAT) ? process.env.DATEFORMAT : "dddd, MMMM Do YYYY, h:mm:ss a")}
   };
+  console.log("posted to discord: ", caption);
   if(img!==undefined&&img!==null){embed.image= {"url": img}}
   Hook.forEach(function(hook){
     hook.send({embeds: [embed]});

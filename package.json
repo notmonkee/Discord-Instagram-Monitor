@@ -10,7 +10,6 @@
     "discord.js": "^11.4.2",
     "moment": "^2.23.0",
     "node-instagram-data-scraper": "^1.0.3",
-    "request": "^2.88.0",
     "scrape-twitter": "^0.11.1",
     "simple-array-diff": "^1.1.0",
     "then-request": "^6.0.0",
