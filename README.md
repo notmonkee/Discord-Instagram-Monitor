@@ -14,8 +14,10 @@ If you miss this volume it's not that important. If you restart the container th
 | ACCOUNTS  | names of accounts to fetch | monkeegfx,instagram |
 | WEBHOOKID  | Take the ID and token out of the webhook URL | empty |
 | WEBHOOKTOKEN  | Take the ID and token out of the webhook URL | empty |
-| TITLE (optional)  | title upwards of the image | Instagram posted |
+| TITLE (optional)  | title upwards of the image with following account name where image got posted | Instagram posted: |
 | DATEFORMAT (optional) | used with momentjs to display date in footer | dddd, MMMM Do YYYY, h:mm:ss a |
+| LOCALE (optional) | used with momentjs to display date in correct language | en |
+| FOOTERTEXT (optional) | empty per default. If you set this variable, content get displayed in footer instead of the date/time | empty |
 
 ![Demo Screenshot of post in discord](demo_onista.png)
 

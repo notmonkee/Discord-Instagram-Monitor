@@ -39,10 +39,12 @@ ci.setCorrectingInterval(function() {
 
 function postToWebhook(id, url, img, caption){
   const embed = {
-    "title": (!!process.env.TITLE) ? process.env.TITLE : id+' posted:' ,
+    "title": (!!process.env.TITLE) ? process.env.TITLE + id : id+' posted:' ,
     "description": caption,
     "url": url,
-    "footer": {"text": moment().format((!!process.env.DATEFORMAT) ? process.env.DATEFORMAT : "dddd, MMMM Do YYYY, h:mm:ss a")}
+    "footer": {
+    	"text": (!!process.env.FOOTERTEXT) ? process.env.FOOTERTEXT : moment().locale((!!process.env.LOCALE) ? process.env.LOCALE : 'en').format((!!process.env.DATEFORMAT) ? process.env.DATEFORMAT : "dddd, MMMM Do YYYY, h:mm:ss a")
+    }
   };
   console.log("posted to discord: ", caption);
   if(img!==undefined&&img!==null){embed.image= {"url": img}}
