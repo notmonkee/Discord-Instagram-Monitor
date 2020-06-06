@@ -14,7 +14,9 @@
     "scrape-twitter": "^0.11.1",
     "simple-array-diff": "^1.1.0",
     "then-request": "^6.0.0",
-    "webhook-discord": "^3.0.1"
+    "webhook-discord": "^3.0.1",
+    "data-store": "^4.0.3",
+    "correcting-interval": "^2.0.0"
   },
   "devDependencies": {},
   "scripts": {
