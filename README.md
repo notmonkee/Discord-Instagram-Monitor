@@ -5,7 +5,8 @@ A Linux/Windows/OSX server that's always running. (I host this program on a free
 A Discord Webhook (see info [here](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks))
 
 # Running with docker #
-Just pull the image and mount a volume into ``/data`` directory to keep latest state of processes posts
+Just pull the image and mount a volume into ``/data`` directory to keep latest state of processes posts.
+If you miss this volume it's not that important. If you restart the container the latest post get posted again.
 
 ### Environment variables
 | Variable  | Usage |  Default |
