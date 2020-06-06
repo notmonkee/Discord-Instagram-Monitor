@@ -41,10 +41,10 @@ ci.setCorrectingInterval(function() {
 
 function postToWebhook(id, url, img, caption){
   const embed = {
-    "title": id+' posted:',
+    "title": (!!process.env.TITLE) ? process.env.TITLE : id+' posted:' ,
     "description": caption,
     "url": url,
-    "footer": {"text": moment().format("dddd, MMMM Do YYYY, h:mm:ss a")}
+    "footer": {"text": moment().format((!!process.env.DATEFORMAT) ? process.env.DATEFORMAT : "dddd, MMMM Do YYYY, h:mm:ss a")}
   };
   if(img!==undefined&&img!==null){embed.image= {"url": img}}
   Hook.forEach(function(hook){

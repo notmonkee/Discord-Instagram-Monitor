@@ -1,6 +1,6 @@
 const config = {
  discord: {
- 	webhookURL: [{id: 'IDHERE', token: 'TOKEN'}],
+ 	webhookURL: [{id: process.env.WEBHOOKID, token: process.env.WEBHOOKTOKEN }],
  },
 };
 module.exports = config;
